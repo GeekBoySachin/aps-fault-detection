@@ -3,7 +3,7 @@ from typing import List
 
 
 REQUIREMENT_FILE_NAME = "/config/workspace/requirements.txt"
-HYPHEN_E_DOT ="-E ."
+HYPHEN_E_DOT ="-e ."
 
 def get_requirements()->List[str]:
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
@@ -19,5 +19,5 @@ setup(
     author="Sachin",
     author_email="sachinv1004@gmail.com",
     packages=find_packages(),
-    install_requires = get_requirements()
+    install_requires = get_requirements(),
     )
